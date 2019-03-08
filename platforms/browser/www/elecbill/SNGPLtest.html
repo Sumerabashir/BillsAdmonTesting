@@ -1,0 +1,480 @@
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <title>Check Bills Online Electricity Sui Gas Bills</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Check Bills Online</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="index.html" id="Check All Bills" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Check All Bills Here</a>
+        <div class="dropdown-menu" aria-labelledby="dropdown01">
+          <a class="dropdown-item" href="elec.html">Electricty Bills </a>
+          <a class="dropdown-item" href="suigas.html">Sui Gas Bills</a>
+          
+          </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+
+
+
+        <div  class="col-sm-9 cunsumer-bill">
+            <h2>Consumer Bill</h2>
+            <h3>Domestic/Commercial/RLNG Consumers</h3>
+            <p>Domestic, Commercial and RLNG Consumers can View their bill in a Single step by giving their Account ID. (printed on the bill)</p>
+            <div  class="table-responsive">
+             <form name="frmDomesticConsumNo" id="frmDomesticConsumNo">
+             	<input type="hidden" value="viewbill" name="proc" ID="Hidden2">
+             	<input type="hidden" value="NewCon" name="contype" ID="contype">
+				<input type="hidden" name="mdids" value="85" maxlength="250" />					
+                <table class="table table-bordered table-striped">      
+                    <tr>
+                        <td align="center">Account ID:<span class="msgtxt">*</span> </td>
+                        <td> <input class="form-control" name="consumer" id="consumer" type="text" placeholder="Account ID" required="" /></td>
+                       <!-- <td>
+                         <select name="contype" class="form-control">
+                            <option value="OldCon">Old</option>
+                            <option value="NewCon" selected="selected">New</option>
+                          </select>
+                        </td>-->
+                    </tr>				
+                    <tr>
+                        <td class="remove-cb-xs"><strong><a href="billcalc.jsp?mdids=85">Bill Calculator</a></strong></td>
+                        <td>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="reset" class="btn btn-default">Reset</button>
+                        </td>
+                    </tr>
+					<!--<tr>
+                        <td class="remove-cb-xs"></td>
+                        <td><strong><a href="billcalc.jsp?mdids=85">Bill Calculator</a></strong></td>
+                    </tr>-->
+                    <tr>
+                    <td class="remove-cb-xs"></td>
+                    <td>All fields marked with <span class="msgtxt">*</span> are mandatory.</td>
+                    </tr>
+			</table>
+            </form>
+		</div>
+		<h3>Industrial Consumers</h3>
+		<p>In order to view current bill and/or billing history, industrial consumers must register with us. If you are already registered, you may simply login</p>
+		<div  class="table-responsive">
+        <form name="frmUserSignin" action="CustomerController" method="post">
+                <table class="table table-bordered table-striped"> 
+				<tr>
+					 <td align="center">Login: <span class="msgtxt">*</span></td>
+					<td> <input class="form-control" type="text" name="txtUserloginName" required="" placeholder="Login" /></td>
+				</tr>
+				<tr>
+					 <td align="center">Password : <span class="msgtxt">*</span></td>
+					<td> <input class="form-control" type="password" id="txtUserPassword" name="txtUserPassword" required="" placeholder="Password" maxlength="15" value="" autocomplete="off" />
+					<input type="hidden" name="lang" value="en" /> 
+					</td>
+                   
+				</tr>
+				<tr>
+                 <td class="remove-cb-xs"></td>
+				<td><button type="submit" class="btn btn-default" value="Login" name="action" >Submit</button>
+				<button type="reset" class="btn btn-default">Reset</button></td>
+				</tr>
+				<tr>
+                 <td class="remove-cb-xs"></td>
+				<td>All fields marked with <span class="msgtxt">*</span> are mandatory.</td>
+				</tr>				 
+			</table>
+         </form>   
+		</div>
+        <div align="center"> 
+	  <a href="register.jsp?mdids=86">Register </a>| <a href="ForgotPWUser.jsp?mdids=87">Forgot Password </a>| <a href="registersms.jsp?mdids=88">Register to Get Bill on SMS  </a>
+    </div>  
+	</div>
+        </div></div>
+ </section>
+<!--========================-->
+<!--/** Footer **/-->
+<!--========================-->
+ <section id="footer-sect">
+    <section id="recent-works" class="shortcode-item galley">
+             <div class="center wow fadeInDown">
+                <h2>Gallery</h2>
+  		 <div class="owl-carousel owl-carousel-one">
+<!--			
+			<div class="item">
+                <div class="recent-work-wrap-one one">
+                    <img class="img-responsive" src="images/adds/savegas1.gif" alt="">
+                    <a href="cda.php"><div class="overlay">
+                        <div class="recent-work-inner">
+                            <h3>Save Gas</h3>
+                       </div> </a>
+                    </div>
+                </div>
+            </div>
+			<div class="item">
+                <div class="recent-work-wrap-one one">
+                    <img class="img-responsive" src="images/adds/savegas2.gif" alt="">
+                    <a href="cda.php"><div class="overlay">
+                        <div class="recent-work-inner">
+                            <h3>Save Gas</h3>
+                       </div> </a>
+                    </div>
+                </div>
+            </div>
+			<div class="item">
+                <div class="recent-work-wrap-one one">
+                    <img class="img-responsive" src="images/adds/savegas3.gif" alt="">
+                    <a href="cda.php"><div class="overlay">
+                        <div class="recent-work-inner">
+                            <h3>Save Gas</h3>
+                       </div> </a>
+                    </div>
+                </div>
+            </div>
+			<div class="item">
+                <div class="recent-work-wrap-one one">
+                    <img class="img-responsive" src="images/adds/savegas4.gif" alt="">
+                    <a href="cda.php"><div class="overlay">
+                        <div class="recent-work-inner">
+                            <h3>Save Gas</h3>
+                        </div> </a>
+                    </div>
+                </div>
+            </div>
+			<div class="item">
+                <div class="recent-work-wrap-one one">
+                    <img class="img-responsive" src="images/adds/savegas5.gif" alt="">
+                    <a href="cda.php"><div class="overlay">
+                        <div class="recent-work-inner">
+                            <h3>Save Gas</h3>
+                       </div> </a>
+                    </div>
+                </div>
+            </div>
+			<div class="item">
+                <div class="recent-work-wrap-one one">
+                    <img class="img-responsive" src="images/adds/savegas6.gif" alt="">
+                    <a href="cda.php"><div class="overlay">
+                        <div class="recent-work-inner">
+                            <h3>Save Gas</h3>
+                        </div> </a>
+                    </div>
+                </div>
+            </div>
+			<div class="item">
+                <div class="recent-work-wrap-one one">
+                    <img class="img-responsive" src="images/adds/savegas7.gif" alt="">
+                    <a href="cda.php"><div class="overlay">
+                        <div class="recent-work-inner">
+                            <h3>Save Gas</h3>
+                        </div> </a>
+                    </div>
+                </div>
+            </div>
+-->
+
+       		<div class="item">
+                <div class="recent-work-wrap-one"> 
+                    <img class="img-responsive" src="images/ss2.jpg" alt="">
+                    <div class="overlay">
+                        <div class="recent-work-inner">
+                            <h3>Pipeline Welding</h3>
+                        </div> 
+                    </div>
+                </div>
+            </div>               
+            <div class="item">
+                <div class="recent-work-wrap-one">
+                    <img class="img-responsive" src="images/portfolio/full/item2.jpg" alt="">
+                    <div class="overlay">
+                        <div class="recent-work-inner">
+                            <h3>Coating Plant</h3>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+            	<div class="recent-work-wrap-one">
+                    <img class="img-responsive" src="images/ss5.jpg" alt="">
+                    <div class="overlay">
+                        <div class="recent-work-inner">
+                            <h3>Crossing</h3>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+		   <div class="item">
+			 <div class="recent-work-wrap-one">
+					<img class="img-responsive" src="images/ss6.jpg" alt="">
+					<div class="overlay">
+						<div class="recent-work-inner">
+							<h3><a href="#">Pipeline Lowering</a> </h3>
+						</div> 
+					</div>
+				</div>
+			</div> 
+			<div class="item">
+                <div class="recent-work-wrap-one">
+                    <img class="img-responsive" src="images/ss2.jpg" alt="">
+                    <div class="overlay">
+                        <div class="recent-work-inner">
+                           <h3>Pipeline Welding</h3>
+                        
+						</div> 
+                    </div>
+                </div>
+            </div>			
+        </div>
+        </div>
+    </section>
+   
+
+   
+<div class="col-sm-12 sdd">
+	<div class="col-lg-6 col-sm-4 n-e">
+	<div class="messages-sngpls sngpl-news sngpl-messages events">
+             <p style="text-align: center;">
+                    <span class="m-heading">News and Events</span> 
+             </p>
+  		 <div  class="owl-carousel owl-carousels landing-news">
+        
+         	 <div class="item">
+                <div class="client-info">
+                     <a href="page.jsp?pgids=3525&pgname=PAGES_NAME_a&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">
+                     <div class="client-meta">
+                    <h3>Establishment of PM - CJ Fund for Diamer Basha and Mohmand Dam</h3>
+                    </div>
+                    <div class="client-comment">
+                     <p>The Prime Minister has been pleased to call for public donations for PM - CJ Fund for Diamer Basha and Mohmand Dam. The Account Detail is BANK: &nbsp;&nbsp;&nbsp;&nbsp; STATE BANK OF PAKISTAN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TITLE: &nbsp; SUPREME COURT OF PAKISTAN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ACCOUNT NO. : &nbsp;&nbsp;&nbsp;&nbsp; 03-593-299999-001-4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IBAN: &nbsp;&nbsp;&nbsp; PK06SBPP0035932999990014</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+         	 <div class="item">
+                <div class="client-info">
+                     <a href="page.jsp?pgids=1723&pgname=PAGES_NAME_a&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">
+                     <div class="client-meta">
+                    <h3>1st Quarter Accounts (Un-Audited)</h3>
+                    </div>
+                    <div class="client-comment">
+                     <p>We feel immense pleasure to present the un-audited financial statements of the company for the 1st quarter ended September 30, 2017.</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        
+            <div class="item">
+                <div class="client-info">
+                     <a href="page.jsp?pgids=1721&pgname=PAGES_NAME_a&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">
+                     <div class="client-meta">
+                    <h3>The Pride - SNGPL Monthly Newsletter</h3>
+                    </div>
+                    <div class="client-comment">
+                     <p>SNGPL monthly newsletter "The Pride" for the month of October 2017 has been published.</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+      
+       		<div class="item">
+                <div class="client-info">
+                     <a href="#">
+                     <div class="client-meta">
+                    <h3>Annual Sports Gala 2017</h3>
+                    </div>
+                    <div class="client-comment">
+                     <p>SNGPL Annual Sports Gala 2017 was held at WAPDA sports complex <br />in which 288 Male and 15 Female participants took part from all regions. </p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+			
+             <div class="item">
+                <div class="client-info">
+                  <a href="page.jsp?pgids=1724&pgname=PAGES_NAME_a&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">
+                    <div class="client-meta">
+                    <h3>Annual Report for the Year 2016</h3>
+                    </div>
+                    <div class="client-comment">
+                     <p>The actual tenacity of an organization is tested not only when it has to pass through severe ...</p>
+                    </div>
+                    </a>
+                </div>
+            </div>
+			
+        </div>
+    </div>
+
+</div>
+
+<div class="col-lg-6 col-sm-8 sdd-line">
+
+	<div id="sd">
+		<div class="">
+		<div class="row">
+			<h2 class="heading">SERVICE DESK - CLICK ME</h2>
+			<div class="col-sm-12">
+			<div class="row">
+			<a href="https://sdms.secp.gov.pk/"  target="_blank">
+ 			<div class="col-sm-3"><div class="row"><img class="img-responsive" src="images/secp-logo.png" alt="LOGO"></div></div>
+			<div class="col-sm-3"><div class="row"><span><h2 class="sub-head">Toll Free</h2><div class="col-md-2 col-sm-12"><div class="row"><i class="fa fa-phone"></i></div></div><div class="col-md-9 col-md-12"><div class="row">(From Landline Only)<br>0800-88008</div></div></span></div></div>
+			<div class="col-sm-3"><div class="row"><span><h2 class="sub-head">Complaints</h2><div class="col-md-2 col-sm-12"><div class="row"><i class="fa fa-globe"></i></div></div><div class="col-md-9 col-md-12"><div class="row">http://sdms.gov.pk<br>complaints@secp.gov.pk</div></div></span></div></div>
+			<div class="col-sm-3"><div class="row"><span><h2 class="sub-head">Queries</h2><div class="col-md-2 col-sm-12"><div class="row"><i class="fa fa-envelope"></i></div></div><div class="col-md-9 col-md-12"><div class="row">http://sdms.gov.pk<br>Queries@secp.gov.pk</div></div></span></div></div>
+			</a>
+			</div>
+			</div>
+		</div>
+		</div>
+
+	</div>
+</div>
+</div>
+
+
+
+	
+<section id="bottom">
+    <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+    <div class="row">
+        <div class="col-md-10 col-sm-12 botton-inner">
+            <div class="widget">
+                <div class="col-md-3 col-sm-12">
+		<h2>Head Office</h2>
+                <ul>
+                    <li><a href="">Gas House, 21-Kashmir Road, P.O Box No. 56<br /> Lahore 54000, Pakistan. </a></li>
+                    <li>Ph: <a href="">92 42 99082000-06</a>,<br /> <a href="">92 42 99080000</a></li>
+                    <li>Email: <a href="mailto:billing@sngpl.com.pk"> billing@sngpl.com.pk</a>,<br /><a href="mailto:customerservices@sngpl.com.pk"> customerservices@sngpl.com.pk</a></li>
+                </ul>
+                </div>
+                 <div class="col-md-9 col-sm-12">
+		<div class="row">
+		<h2>Links</h2>
+		<div class="col-md-12 col-sm-12">
+                <ul class="col-md-4 col-sm-12 child-links">
+                    <li><a href="page.jsp?pgids=322&pgname=PAGES_NAME_a&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">About SNGPL</a></li>
+                    <li><a href="page.jsp?pgids=2290&pgname=PAGES_NAME_a&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">Financial Highlights</a></li>
+                    <li><a href="page.jsp?pgids=1141&pgname=PAGES_NAME_a&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">Health Safety & Environment</a></li>
+                    <li><a href="page.jsp?pgids=2288&pgname=PAGES_NAME_a&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">Awards and Certificates</a></li>
+					<!--<li><a href="https://www.sngpl.com.pk/web/jobs/form.jsp" target="_blank">Trainee Students Induction</a><img src="images/new3.gif" alt="" width="35" height="15" /></li>-->
+					<li><a href='sharesinfo.jsp?mdids=91&pgname=PAGES_NAME_a&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465'>Unclaimed Shares Information</a><!--<img src="images/new3.gif" alt="" width="35" height="15" />--></li>
+					<li><a href="page.jsp?pgids=3525&pgname=contact us&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465" >Establishment of PM - CJ Fund for Diamer Basha and Mohmand Dam</a></li>
+				</ul>
+		<ul class="col-md-4 col-sm-12 child-links">
+                    <li><a href="pdf/energyfocus.pdf" target="_blank">Energy Conservation</a></li>
+                    <li><a href="page.jsp?pgids=1721&pgname=PAGES_NAME_a&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">The Pride - Newsletter</a></li>
+                    <li><a href="pdf/Bill_Proforma.pdf" target="_blank">Consumer Feedback</a></li>
+                    <li><a href="page.jsp?pgids=315&pgname=PAGES_NAME_a&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">Careers</a></li>
+					<li><a href="billcalc.jsp?mdids=92&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">Bill Calculator<img src="images/new3.gif" alt="" width="35" height="15" /></a></li>
+                    <li><a href="page.jsp?pgids=3531&pgname=PAGES_NAME_a&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">Bill Information<img src="images/new3.gif" alt="" width="35" height="15" /></a></li>
+					<!--<li><a href="page.jsp?pgids=315&pgname=PAGES_NAME_a&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">Careers<img src="images/new3.gif" alt="" width="35" height="15" /></a></li>-->
+					<!--<li><a href='https://www.sngpl.com.pk/web/jobs/form.jsp'>Trainee Students Induction</a><img src="images/new3.gif" alt="" width="35" height="15" /></li>-->
+                </ul>
+		<ul class="col-md-4 col-sm-12 child-links">
+                   <li><a href="page.jsp?pgids=1561&pgname=contact us&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">Company Offices</a></li>
+                   <li><a href="page.jsp?pgids=0&pgname=contact us&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">Contact Us</a></li>
+                   <li><a href="sitemap.jsp?pgids=0&pgname=Sitemap&secs=ss7xa852op845&cats=ct456712337&artcl=artuyh709123465">Site Map</a></li>
+				   <!--<li><a href="http://www.cda.gov.pk/documents/publicnotices/348.jpg" target="_blank">Message From CDA</a></li>-->
+				   <li><a href="UploadFolder/others/List_Hajj_2019.pdf" target="_blank">Hajj Draw 2019<img src="images/new3.gif" alt="" width="35" height="15" /></a></li>
+				   <li><a href="download/ISDBScholarships2019-20.pdf" target="_blank">Scholarships By <br />Islamic Development Bank for <br />Academic Year 2019-2020<img src="images/new3.gif" alt="" width="35" height="15" /></a></li>				   
+                </ul>
+		</div>   
+		</div>
+                 </div>
+                </div>
+            </div> 
+            <div class="col-md-2 botton-inner jamma-punji">
+	    <br />
+             <a href="http://www.jamapunji.pk/" target="_blank"><img class="img-responsive" src="images/Jamapunji.png" alt="Jama-Punji" /></a>
+            </div>   
+        </div><!--/.col-md-3-->
+        </div>
+    </div>
+</section><!--/#bottom-->
+
+<section id="footer" class="midnight-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6"> &copy; 2017 All Rights Reserved. </div>
+           <div class="col-sm-6 pull-right powerd"> Powered By  <a href="#">Sui Northern Gas Pipelines Limited</a>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/jquery.js?rand=1550975922154"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/owlcarousel/owl.carousel.min.js"></script>
+<script src="js/main.js"></script>
+<script src="gallery/js/blueimp-gallery.min.js"></script>
+<script src="js/custom-function.min2.js?rand=1550975922154"></script>
+
+<!--<script src="js/jquery.fancybox.min.js"></script>-->
+
+<style>
+.gallery
+{
+    display: inline-block;
+    margin-top: 20px;
+}
+</style>
+
+<script>
+/*
+$(document).ready(function(){
+    //FANCYBOX
+    //https://github.com/fancyapps/fancyBox
+    $(".fancybox").fancybox({
+        openEffect: "none",
+        closeEffect: "none"
+    });
+});
+   */
+   document.getElementById('links').onclick = function (event) {
+	    event = event || window.event;
+	    var target = event.target || event.srcElement,
+	        link = target.src ? target.parentNode : target,
+	        options = {index: link, event: event},
+	        links = this.getElementsByTagName('a');
+	    blueimp.Gallery(links, options);
+	};
+  
+  </script>
+
+</html>     
+ </section>
+     
+<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+          <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
+

@@ -1,0 +1,106 @@
+function checkDigits(s)
+{
+	for (var i = 0; i < s.length; i++)
+	{
+		var ch = s.substring(i, i + 1);
+		if  ((ch < "0" || "9" < ch) )
+		{			
+			return false;
+   		}
+		else
+		{
+			return true;
+		}
+	}	
+}
+
+function checkUserSignin (ss)
+{
+    var sError="";
+    if (frmUserSignin.txtUserloginName.value == "") 
+    {
+       sError = sError + " Login Name" + ' \n';
+       frmUserSignin.txtUserloginName.style.background = 'Yellow';
+    }
+    else 
+    {
+    frmUserSignin.txtUserloginName.style.background = 'White';
+    }
+   
+    if (frmUserSignin.txtUserPassword.value == "") 
+    {
+        sError = sError + "  Password" + ' \n';
+    	frmUserSignin.txtUserPassword.style.background = 'Yellow';
+    }
+    else 
+    {
+    	frmUserSignin.txtUserPassword.style.background = 'White';
+    }   	
+	
+    if (sError != "")
+    {
+        alert("You must Provide the following Fields" + ' \n \n' + sError);
+        if (frmUserSignin.txtUserloginName.value == "") 
+        {
+            frmUserSignin.txtUserloginName.focus();
+    	}
+    
+		else if (frmUserSignin.txtUserPassword.value == "") 
+		{
+            frmUserSignin.txtUserPassword.focus();
+    	}	
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
+function checkDomesticConsumberNo(ss){
+	var sError="";
+	//var theForm = ss;
+	//alert(ss);
+	//alert(ss.consumer.value);
+	
+   if (ss.consumer.value == "") 
+   {
+       sError = sError + " Consumer Number  " + ' \n';
+   	   ss.consumer.style.background = 'Yellow';
+   } 
+   else 
+   {
+   		ss.consumer.style.background = 'White';
+   }
+   
+   if(ss.consumer.value.length <10 || ss.consumer.value.length > 11)
+   {
+		sError = sError + " Please Enter Your Consumer Number  correctly." + ' \n';
+   	    ss.consumer.style.background = 'Yellow';
+   }
+   else 
+   {
+   		ss.consumer.style.background = 'White';
+   }
+   
+   if (ss.consumer.value != "" && !(checkDigits(ss.consumer.value))) 
+   {
+       sError = sError + " Only digits can be entered as Consumer Number  " + ' \n';
+   	   ss.consumer.style.background = 'Yellow';
+   }
+   else 
+   {
+   		ss.consumer.style.background = 'White';
+   }  
+   
+  	if (sError != "") 
+  	{
+    	alert("You must Provide the following Fields" + ' \n \n' + sError); 
+        ss.consumer.focus();           
+		return false;
+  	}
+  	else
+  	{
+  		return true;	
+  	}    
+}
