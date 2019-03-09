@@ -1,5 +1,9 @@
-document.addEventListener('deviceready', onDeviceReady, false);
+
+
 
 function onDeviceReady(){
-  console.log('Device Ready...');
-}
+	admob.createBannerView({publisherId: "ca-app-pub-6720216883640190/1313174725"});
+
+}	document.addEventListener('deviceready', onDeviceReady, false);
+
+
