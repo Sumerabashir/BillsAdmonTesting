@@ -1,5 +1,5 @@
-<?xml version='2.0' encoding='utf-8'?>
-<widget id="com.smartvisionapps.Bills" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/2.0">
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.smartvisionapps.Bills" version="2.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Check Electricity SuiGas Bills Online</name>
     <description>
         Check Bills Online Electricity Bills ,Sui Gas Bills PtCL Telephone Bills
